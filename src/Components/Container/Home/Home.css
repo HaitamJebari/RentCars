@@ -1,0 +1,158 @@
+.Arrow{
+    position: absolute;
+    z-index: 1;
+    font-size: 2em;
+    cursor: pointer;
+}
+#right_arrow{  
+    margin-top: 10em;
+    margin-left: 2em;
+    
+}
+#left_arrow{
+    margin-top: -41.7em;
+    margin-left: 36em;
+}
+
+
+/* .PageHome{
+    margin-top: 50px;
+}
+
+.PageHome {
+    transition: transform 0.3s ease; /* Optional: Add transition for smooth animation */
+/* } */
+
+.PageHome.clicked {
+    transform: translateY(100px); /* Example transformation on click */
+} */
+.PageHome {
+    transition: transform 0.3s ease; /* Optional: Add transition for smooth animation */
+}
+
+.PageHome.down {
+    transform: translateY(100px); /* Move down */
+}
+
+.PageHome.up {
+    transform: translateY(-100px); /* Move up */
+}
+
+.Arrow {
+    cursor: pointer;
+}
+
+h1{
+    color: #6c757df9;
+    text-align: center;
+}
+.ford{
+    font-size: 4em;
+}
+.must{
+    margin-top: -25px;
+    font-size: 12em;
+}
+.Car_must{
+    margin-top: -90px;
+    text-align: center;
+}
+#t1{
+    width: 8em;
+    height: 8em;
+    margin-left: 19.45em;
+    margin-top: -11.5em;
+}
+#t2{
+    width: 8em;
+    height: 8em;
+    margin-left: 22.3em;
+    margin-top: -12em;
+}
+
+/* .Car_must img #t1 {
+    transition: transform 2s ease;
+    -webkit-transition: transform 2s ease;
+    -moz-transition: transform 2s ease;
+    -ms-transition: transform 2s ease;
+    -o-transition: transform 2s ease;
+}
+
+.Car_must.spinning img #t1 {
+    animation: spin 6s linear infinite;
+    -webkit-animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+} */
+
+
+
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; 
+    font-size: 15px;
+    margin-left: 80px;
+    margin-top: -100px;
+    cursor: pointer;
+}
+.icons > * {
+    margin-bottom: 15px; /* Adds space between each icon */
+}
+#icon:hover{
+    font-size: 18px;
+}
+.custom-carousel-icon{
+    position: absolute;
+    color: red;
+    font-size: 24px;
+    text-decoration: #6c757df9;
+}
+
+.buttons{
+    text-align: center;
+    
+}
+
+#rent3{
+    width: 10em;
+  background-color: #7d0002;
+  color: white;
+  font-size: 20px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+#det3{
+    width: 10em;
+    padding: 10px;
+  font-size: 20px;
+  color: rgb(87, 87, 87);
+  margin-left: 30px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(0, 0, 0);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  cursor: pointer;
+}
+
+
+
