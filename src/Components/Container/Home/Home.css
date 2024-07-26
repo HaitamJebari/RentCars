@@ -4,15 +4,15 @@
     font-size: 2em;
     cursor: pointer;
 }
-#right_arrow{  
-    margin-top: 10em;
-    margin-left: 2em;
-    
-}
 #left_arrow{
-    margin-top: -41.7em;
+    margin-top: 9em;
+    margin-left: 2em;
+}
+#right_arrow{  
+    margin-top: -44.5em;
     margin-left: 36em;
 }
+
 
 
 /* .PageHome{
@@ -23,30 +23,120 @@
     transition: transform 0.3s ease; /* Optional: Add transition for smooth animation */
 /* } */
 
+
+
+
 .PageHome.clicked {
     transform: translateY(100px); /* Example transformation on click */
 } */
 .PageHome {
+    position: absolute;
     transition: transform 0.3s ease; /* Optional: Add transition for smooth animation */
 }
 
 .PageHome.down {
-    transform: translateY(100px); /* Move down */
+    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    -o-transform: translateY(100px);
 }
 
 .PageHome.up {
     transform: translateY(-100px); /* Move up */
 }
 
+
+.slideRight {
+    animation: slideRightAnimation 0.5s forwards;
+}
+
+/* .rotateLeft {
+    animation: rotateLeftAnimation 0.5s forwards;
+    -webkit-animation: rotateLeftAnimation 0.5s forwards;
+} */
+
+
+
+/* go left for car  */
+
+@keyframes slideLeftAnimation {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.slideLeft {
+    animation: 2s linear 0.5s forwards slideLeftAnimation;
+    -webkit-animation: 2s linear 0.5s forwards slideLeftAnimation;
+}
+
+
+
+
+@keyframes slideRightAnimation {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Rotate and go left for car wheels */
+
+@keyframes rotateLeftAnimation {
+    0% {
+        transform: translateX(0) rotate(0);
+    }
+    100% {
+        transform: translateX(-78.9em) rotate(-360deg);
+        -webkit-transform: translateX(-78.9em) rotate(-360deg);
+        -moz-transform: translateX(-78.9em) rotate(-360deg);
+        -ms-transform: translateX(-78.9em) rotate(-360deg);
+        -o-transform: translateX(-78.9em) rotate(-360deg);
+}
+}
+.rotateLeft {
+    animation: rotateLeftAnimation 2s linear 0.5s forwards;
+    -webkit-animation: rotateLeftAnimation 2s linear 0.5s forwards;
+}
+
+
+
+@keyframes rotateRightAnimation {
+    from {
+        transform: rotateY(-90deg);
+    }
+    to {
+        transform: rotateY(0);
+    }
+}
+
+
+
+
+/* .rotateRight {
+    animation: rotateRightAnimation 0.5s forwards;
+} */
+
+
+
+
+
+
 .Arrow {
     cursor: pointer;
 }
 
 h1{
-    color: #6c757df9;
+    color: #8a8a8a;
     text-align: center;
 }
 .ford{
+    margin-top: 1em;
     font-size: 4em;
 }
 .must{
@@ -54,6 +144,7 @@ h1{
     font-size: 12em;
 }
 .Car_must{
+    position: relative;
     margin-top: -90px;
     text-align: center;
 }
