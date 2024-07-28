@@ -1,6 +1,7 @@
 nav{
+    z-index: 1;
+    position: relative;
     background-color: #e3e3e3;
-    margin-top: 16px;
 }
 
 .logo{

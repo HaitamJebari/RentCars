@@ -1,3 +1,4 @@
+
 .Arrow{
     position: absolute;
     z-index: 1;
@@ -9,19 +10,19 @@
     margin-left: 2em;
 }
 #right_arrow{  
-    margin-top: -44.5em;
+    margin-top: -40.5em;
     margin-left: 36em;
 }
 
-
-
-/* .PageHome{
-    margin-top: 50px;
+.vide{
+    width: 100%;
+    height: 5em;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
 }
 
-.PageHome {
-    transition: transform 0.3s ease; /* Optional: Add transition for smooth animation */
-/* } */
+
 
 
 
@@ -34,27 +35,72 @@
     transition: transform 0.3s ease; /* Optional: Add transition for smooth animation */
 }
 
-.PageHome.down {
+/* .PageHome.down {
     transform: translateY(100px);
     -webkit-transform: translateY(100px);
     -moz-transform: translateY(100px);
     -ms-transform: translateY(100px);
     -o-transform: translateY(100px);
+} */
+
+
+
+
+/* go up for Title  */
+
+@keyframes slideUpAnimation {
+    from {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
+    to {
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+}
 }
 
 .PageHome.up {
-    transform: translateY(-100px); /* Move up */
+    animation: 2s ease-in-out 0.5s forwards slideUpAnimation;
+    -webkit-animation: 2s ease-in-out 0.5s forwards slideUpAnimation;
 }
 
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-.slideRight {
-    animation: slideRightAnimation 0.5s forwards;
+/* go down for Title  */
+
+/* @keyframes slideDownAnimation {
+    from {
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+}
+    to {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
 }
 
-/* .rotateLeft {
-    animation: rotateLeftAnimation 0.5s forwards;
-    -webkit-animation: rotateLeftAnimation 0.5s forwards;
+.PageHome.down {
+    animation: 2s ease-in-out 0.5s forwards slideDownAnimation;
+    -webkit-animation: 2s ease-in-out 0.5s forwards slideDownAnimation;
 } */
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
 
 
 
@@ -73,17 +119,7 @@
     -webkit-animation: 2s linear 0.5s forwards slideLeftAnimation;
 }
 
-
-
-
-@keyframes slideRightAnimation {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* Rotate and go left for car wheels */
 
@@ -96,7 +132,7 @@
         -webkit-transform: translateX(-78.9em) rotate(-360deg);
         -moz-transform: translateX(-78.9em) rotate(-360deg);
         -ms-transform: translateX(-78.9em) rotate(-360deg);
-        -o-transform: translateX(-78.9em) rotate(-360deg);
+        -o-transform: trans lateX(-78.9em) rotate(-360deg);
 }
 }
 .rotateLeft {
@@ -104,23 +140,53 @@
     -webkit-animation: rotateLeftAnimation 2s linear 0.5s forwards;
 }
 
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 
-@keyframes rotateRightAnimation {
+/* @keyframes slideRightAnimation {
     from {
-        transform: rotateY(-90deg);
-    }
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+}
     to {
-        transform: rotateY(0);
+        transform: translateX(0);
     }
 }
 
+.slideRight {
+    animation: 2s linear 0.5s forwards slideLeftAnimation;
+    -webkit-animation: 2s linear 0.5s forwards slideLeftAnimation;}
+
+ */
 
 
 
-/* .rotateRight {
-    animation: rotateRightAnimation 0.5s forwards;
-} */
+
+    /* @keyframes rotateRightAnimation {
+        0% {
+            transform: translateX(-78.9em) rotate(-360deg);
+            -webkit-transform: translateX(-78.9em) rotate(-360deg);
+            -moz-transform: translateX(-78.9em) rotate(-360deg);
+            -ms-transform: translateX(-78.9em) rotate(-360deg);
+            -o-transform: translateX(-78.9em) rotate(-360deg);
+        }
+        100% {
+            transform: translateX(0) rotate(0);
+            -webkit-transform: translateX(0) rotate(0);
+            -moz-transform: translateX(0) rotate(0);
+            -ms-transform: translateX(0) rotate(0);
+            -o-transform: translateX(0) rotate(0);
+        }
+    }
+    
+    .rotateRight {
+        animation: rotateRightAnimation 2s linear 0.5s forwards;
+        -webkit-animation: rotateRightAnimation 2s linear 0.5s forwards;
+    } */
+    
 
 
 
@@ -136,10 +202,11 @@ h1{
     text-align: center;
 }
 .ford{
-    margin-top: 1em;
+    position: relative;
     font-size: 4em;
 }
 .must{
+    position: relative;
     margin-top: -25px;
     font-size: 12em;
 }
@@ -161,27 +228,6 @@ h1{
     margin-top: -12em;
 }
 
-/* .Car_must img #t1 {
-    transition: transform 2s ease;
-    -webkit-transition: transform 2s ease;
-    -moz-transition: transform 2s ease;
-    -ms-transition: transform 2s ease;
-    -o-transition: transform 2s ease;
-}
-
-.Car_must.spinning img #t1 {
-    animation: spin 6s linear infinite;
-    -webkit-animation: spin 6s linear infinite;
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-} */
 
 
 
