@@ -5,3 +5,6 @@
 body{
     background-color: var(--main-color);
 }
+html{
+    overflow-y: hidden;
+}

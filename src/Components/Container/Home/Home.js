@@ -17,6 +17,7 @@ function Home() {
     const [t1AnimationClass, setT1AnimationClass] = useState(''); // State for t1 animation class
     const [t2AnimationClass, setT2AnimationClass] = useState(''); // State for t2 animation class
 
+
     const handleRightArrowClick = () => {
         setIsUpClicked(!isUpClicked);
         setIsDownClicked(false);
@@ -24,28 +25,31 @@ function Home() {
         setCarAnimationClass('slideLeft'); // Apply animation class for Car_must
         setT1AnimationClass('rotateLeft'); // Apply animation class for t1
         setT2AnimationClass('rotateLeft'); // Apply animation class for t2
+
+
     };
 
+
+ 
     
-
-    const handleLeftArrowClick = () => {
-        setIsDownClicked(!isDownClicked);
-        setIsUpClicked(false);
-        setAnimationDirection('right'); // Set animation direction to right
-        setCarAnimationClass('slideLeft'); // Apply animation class for Car_must
-        setT1AnimationClass('rotateLeft'); // Apply animation class for t1
-        setT2AnimationClass('rotateLeft'); // Apply animation class for t2
-        setAnimationDirection('left'); // Set animation direction to left
-        setCarAnimationClass('slideRight'); // Apply animation class for Car_must returning to start
-        setT1AnimationClass('rotateRight'); // Apply animation class for t1 returning to start
-        setT2AnimationClass('rotateRight'); // Apply animation class for t2 returning to start
-    };
+    // const handleLeftArrowClick = () => {
+    //     setIsDownClicked(!isDownClicked);
+    //     setIsUpClicked(false);
+    //     setAnimationDirection('right'); // Set animation direction to right
+    //     setCarAnimationClass('slideLeft'); // Apply animation class for Car_must
+    //     setT1AnimationClass('rotateLeft'); // Apply animation class for t1
+    //     setT2AnimationClass('rotateLeft'); // Apply animation class for t2
+    //     setAnimationDirection('left'); // Set animation direction to left
+    //     setCarAnimationClass('slideRight'); // Apply animation class for Car_must returning to start
+    //     setT1AnimationClass('rotateRight'); // Apply animation class for t1 returning to start
+    //     setT2AnimationClass('rotateRight'); // Apply animation class for t2 returning to start
+    // };
 
     
     return(
       <>
         <MdOutlineArrowBackIosNew className="Arrow" id="left_arrow" 
-        onClick={handleLeftArrowClick} 
+        // onClick={handleLeftArrowClick} 
         />
           
             <div className='vide'></div>
@@ -53,17 +57,18 @@ function Home() {
                 <h1 className='ford'>FORD</h1>
                 <h1 className='must'>MUSTANG</h1>
             </div>
+            <div className='vide2'></div>
             <div className={`Car_must ${carAnimationClass} ${animationDirection === 'left' ? 'left' : ''} ${animationDirection === 'right' ? 'right' : ''}`}>
                 <img src={must} alt="Mustang" />
             </div>
             <img src={mustt1} id='t1' className={`rotate ${t1AnimationClass} ${animationDirection === 'left' ? 'left' : ''} ${animationDirection === 'right' ? 'right' : ''}`} alt="T1" />
             <img src={mustt2} id='t2' className={`rotate ${t2AnimationClass} ${animationDirection === 'left' ? 'left' : ''} ${animationDirection === 'right' ? 'right' : ''}`} alt="T2" />
 
-            <div className={`PageHome`}>
+            <div className={`PageHome ${isUpClicked ? 'up' : ''} ${isDownClicked ? 'down' : ''}`} id='audi'>
                 <h1 className='ford'>AUDI</h1>
                 <h1 className='must'>A3</h1>
             </div>
-            <div className="Car_must">
+            <div className={`Car_must ${carAnimationClass} ${animationDirection === 'left' ? 'left' : ''} ${animationDirection === 'right' ? 'right' : ''}`} id='AudiImg'>
                 <img src={audi} alt="Audi" />
             </div>
 
