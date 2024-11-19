@@ -57,6 +57,26 @@ body{
     -webkit-animation: fadeOut 2s forwards;
 }
 
+@keyframes fadeIn {
+    from {
+        transform: translateY(-32em);
+        -webkit-transform: translateY(-32em);
+        -moz-transform: translateY(-32em);
+        -ms-transform: translateY(-32em);
+        -o-transform: translateY(-32em);
+    }
+    to {
+        transform: translateY(0em);
+        -webkit-transform: translateY(0em);
+        -moz-transform: translateY(0em);
+        -ms-transform: translateY(0em);
+        -o-transform: translateY(0em);
+}
+  }
+.left{
+    animation: fadeIn 2s forwards;
+    -webkit-animation: fadeIn 2s forwards;
+}
 
 .Car_must{
     width: 100%;
@@ -74,6 +94,8 @@ body{
     -moz-transform: translateY(80%);
     -ms-transform: translateY(80%);
     -o-transform: translateY(80%);
+    filter: drop-shadow(5px 30px 20px rgb(105, 106, 106));
+    -webkit-filter: drop-shadow(5px 30px 20px rgb(105, 106, 106));
 }
 
 
@@ -94,6 +116,24 @@ body{
     animation-delay: 0s;
 
 }
+
+@keyframes RightSlide {
+    from {
+        transform: translateX(-100%); /* Slide completely to the Right */
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1; /* Start at the original position */
+
+      }
+  }
+.RightSlide{
+    animation: RightSlide 3s forwards;
+    -webkit-animation: RightSlide 3s forwards;
+    animation-delay: 0s;
+
+}
+
 
 
 
@@ -132,7 +172,25 @@ body{
     -webkit-animation: rotateLeft 3s   forwards;
 }
 
+@keyframes rotateRight {
+    from {
+        transform: translateX(0%) rotate(-360deg);
+        -webkit-transform: translateX(0%) rotate(-360deg);
+        -moz-transform: translateX(0%) rotate(-360deg);
+        -ms-transform: translateX(0%) rotate(-360deg);
+        -o-transform: translateX(0%) rotate(-360deg);
 
+
+    }
+    to {
+        transform: translateX(0) rotate(0);
+}
+}
+.rotateRight {
+    animation: rotateRight 3s   forwards;
+    animation-delay: 0s;
+    -webkit-animation: rotateRight 3s   forwards;
+}
 
 
 
@@ -149,6 +207,7 @@ body{
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
+    cursor: pointer;
 }
 #left_arrow{
     left: 5%;
@@ -157,7 +216,6 @@ body{
 #right_arrow{
     position: absolute;
     right: 5%;
-    cursor: pointer;
     margin-top: -10px;
 }
 
@@ -185,10 +243,10 @@ body{
     position: absolute;
     top: 63%;
     left: 10%;
+    
 
 }
 .icons a{
     height: 7vh;
     display: block;
-    gap: 14px;
 }
