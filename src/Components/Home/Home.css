@@ -9,6 +9,8 @@ body{
     position: fixed;
     z-index: 1;
 }
+
+
 .Title-info{
     text-align: center;
     height: 100vh;
@@ -18,10 +20,29 @@ body{
     z-index: 0;
 
 }
+
 .Title-info h1{
    margin: 0;
    color: var(--main-color);
 }
+
+
+
+#audi{
+    text-align: center;
+    height: 100vh;
+    position: absolute;
+    left: 42%;
+    top: 15%;
+    z-index: 0;
+
+}
+.audi h1{
+   margin: 0;
+   color: var(--main-color);
+}
+
+
 
 
 .ford{
@@ -98,6 +119,27 @@ body{
     -webkit-filter: drop-shadow(5px 30px 20px rgb(105, 106, 106));
 }
 
+#audiImg{
+    width: 100%;
+    position: absolute;
+    opacity: 1; 
+}
+
+#audiImg .Mustang{
+    width: 60%;
+    height: 60%;
+    position: relative;
+    right: -18%;
+    transform: translateY(66%);
+    -webkit-transform: translateY(66%);
+    -moz-transform: translateY(66%);
+    -ms-transform: translateY(66%);
+    -o-transform: translateY(66%);
+    filter: drop-shadow(5px 30px 20px rgb(105, 106, 106));
+    -webkit-filter: drop-shadow(5px 30px 20px rgb(105, 106, 106));
+}
+
+
 
 
 @keyframes LeftSlide {
@@ -116,6 +158,35 @@ body{
     animation-delay: 0s;
 
 }
+
+
+
+
+
+@keyframes FirstLeftSlide {
+    from {
+        transform: translateX(200%);
+        opacity: 1;
+        -webkit-transform: translateX(200%);
+        -moz-transform: translateX(200%);
+        -ms-transform: translateX(200%);
+        -o-transform: translateX(200%);
+}
+      to {
+        opacity: 1;
+}
+  }
+.FirstLeftSlide{
+    animation: FirstLeftSlide 3s forwards;
+    -webkit-animation: FirstLeftSlide 3s forwards;
+    animation-delay: 0s;
+}
+
+
+
+
+
+
 
 @keyframes RightSlide {
     from {
@@ -159,11 +230,11 @@ body{
 
     }
     to {
-        transform: translateX(0%) rotate(-360deg);
-        -webkit-transform: translateX(0%) rotate(-360deg);
-        -moz-transform: translateX(0%) rotate(-360deg);
-        -ms-transform: translateX(0%) rotate(-360deg);
-        -o-transform: translateX(0%) rotate(-360deg);
+        transform: translateX(0%) rotate(-720deg);
+        -webkit-transform: translateX(0%) rotate(-720deg);
+        -moz-transform: translateX(0%) rotate(-720deg);
+        -ms-transform: translateX(0%) rotate(-720deg);
+        -o-transform: translateX(0%) rotate(-720deg);
 }
 }
 .rotateLeft {
@@ -174,14 +245,12 @@ body{
 
 @keyframes rotateRight {
     from {
-        transform: translateX(0%) rotate(-360deg);
-        -webkit-transform: translateX(0%) rotate(-360deg);
-        -moz-transform: translateX(0%) rotate(-360deg);
-        -ms-transform: translateX(0%) rotate(-360deg);
-        -o-transform: translateX(0%) rotate(-360deg);
-
-
-    }
+        transform: translateX(0%) rotate(-720deg);
+        -webkit-transform: translateX(0%) rotate(-720deg);
+        -moz-transform: translateX(0%) rotate(-720deg);
+        -ms-transform: translateX(0%) rotate(-720deg);
+        -o-transform: translateX(0%) rotate(-720deg);
+}
     to {
         transform: translateX(0) rotate(0);
 }

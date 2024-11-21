@@ -1,4 +1,4 @@
-import React , { useState } from 'react'
+import React , { useState , useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF , faInstagram, faTwitter, faPinterest , faArrowAltCircleLeft} from '@fortawesome/free-brands-svg-icons';
 import { MdArrowForwardIos , MdOutlineArrowBackIosNew } from "react-icons/md";
@@ -7,32 +7,17 @@ import must from '../../assets/must.png'
 import mustt1 from '../../assets/must_tire1.png'
 import mustt2 from '../../assets/must_tire2.png'
 import audi from '../../assets/audi.png'
-import luxus from '../../assets/luxus.png'
+
 import './Home.css'
+
+
  
 function Home() {
     
-    // const cars = [
-    //     {
-    //       title: "FORD",
-    //       model: "MUSTANG",
-    //       carImage: require("../../assets/must.png"), // Replace with your actual image path
-    //       tires: [require("../../assets/must_tire1.png"), require("../../assets/must_tire2.png")],
-    //     },
-    //     {
-    //       title: "AUDI",
-    //       model: "A3",
-    //       carImage: require("../../assets/audi.png"),
-    //       tires: [require("../../assets/must_tire1.png"), require("../../assets/must_tire2.png")], // Use different tire images if needed
-    //     },
-    //     {
-    //       title: "LEXUS",
-    //       model: "RX",
-    //       carImage: require("../../assets/luxus.png"),
-    //       tires: [require("../../assets/must_tire1.png"), require("../../assets/must_tire2.png")],
-    //     },
-    //   ];
-    
+
+
+
+
     //   const [currentIndex, setCurrentIndex] = useState(0); // Current car index
     //   const [animationClass, setAnimationClass] = useState(""); // Animation class
     
@@ -57,29 +42,48 @@ function Home() {
 
 
 
-
-
+//    const [currentIndex, setCurrentIndex] = useState(0);
+//    const currentCar = cars[currentIndex];
 
     
     const [IsClickedUp,setIsClickedUp] = useState(false);
     const [AnimationUp,setAnimationUp] = useState('');
 
     const[IsClickedLeft,setIsClickedLeft]=useState("");
+    const[IsClickedFirstLeft,setIsClickedFirstLeft]=useState(true);//this
+
+
+
+
+    useEffect(() => {
+        // Remove the animation class after it completes (3 seconds in this case)
+        const timer = setTimeout(() => {
+            setIsClickedFirstLeft(false);
+        }, 3000); // Match the animation duration
+        return () => clearTimeout(timer); // Cleanup on component unmount
+    }, []);
+
+    
+
+
+
     const[RotateLeft,setRotateLeft]=useState("");
+
+
+
+
 
 
     const handleRightClick = () =>{
 
-            console.log("Arrow right clicked");
 
 
-        setTimeout(() => {
-            setIsClickedUp(true); // Remove the element after animation
-          }, 2000); 
-          setIsClickedUp(false);
+          setIsClickedUp(true);
+
           setAnimationUp('right');
           setIsClickedLeft('LeftSlide');
           setRotateLeft('rotateLeft');
+
 
     }
 
@@ -94,36 +98,22 @@ function Home() {
 
 
     const handleLeftClick = () =>{
-        console.log("Arrow left clicked");
 
-        setTimeout(() => {
-            setIsClickedDown(true); // Remove the element after animation
-          }, 2000); 
+          setIsClickedDown(true);
 
           setAnimationDown('left');
           setIsClickedRight('RightSlide');
-          setRotateRight('rotateRight')
-    }
+          setRotateRight('rotateRight');
+          
+
+
+
+        }
     
 
     return(
       <>
 
-{/* <div className={`Title-info ${animationClass}`}>
-        <h1 className="ford">{currentCar.title}</h1>
-        <h1 className="must">{currentCar.model}</h1>
-      </div>
-
-      {/* Car Image */}
-      {/* <div className={`Car_must ${animationClass}`}>
-        <img src={currentCar.carImage} className="Mustang" alt={currentCar.model} />
-        <div className="Tires">
-          {currentCar.tires.map((tire, index) => (
-            <img key={index} src={tire} className="tire" alt={`Tire ${index + 1}`} />
-          ))}
-        </div>
-            
-        </div> */} 
 
 
 
@@ -131,37 +121,35 @@ function Home() {
 
 {/* First Car */}
       
-        <div className='vide'></div>
-        <div className={`Title-info ${AnimationUp} ${AnimationDown}`}>
+        {/* <div className='vide'></div>
+        <div className={`Title-info ${IsClickedFirstLeft ? "left" : ""} ${AnimationUp} ${AnimationDown}`}>
             <h1 className='ford'>FORD</h1>
             <h1 className='must'>MUSTANG</h1>
         </div>
-        <div className={`Car_must ${IsClickedLeft} ${IsClickedRight}`}>
+        <div className={`Car_must ${IsClickedFirstLeft ? "FirstLeftSlide" : ""} ${IsClickedLeft} ${IsClickedRight} `}>
           <img src={must} className='Mustang' alt="Mustang" />
              <div className='Tires'>
-                 <img src={mustt1} className={`t1 ${RotateLeft} ${RotateRight}`} alt="T1" />
-                 <img src={mustt2} className={`t2 ${RotateLeft} ${RotateRight}`} alt="T2" />
+                 <img src={mustt1} className={`t1 ${IsClickedFirstLeft ? "rotateLeft" : ""} ${RotateLeft} ${RotateRight}`} alt="T1" />
+                 <img src={mustt2} className={`t2 ${IsClickedFirstLeft ? "rotateLeft" : ""} ${RotateLeft} ${RotateRight}`} alt="T2" />
              </div>
-        </div>
+        </div> */}
  
 {/* First Car */}
 {/* Second Car */}
-        {/* <div className='vide'></div>
-        <div className={`Title-info ${AnimationUp} ${AnimationDown}`}>
+        <div className='vide'></div>
+        <div className={`Title-info `} id="audi">
             <h1 className='ford'>AUDI</h1>
             <h1 className='must'>A3</h1>
         </div>
-        <div className={`Car_must ${IsClickedLeft} ${IsClickedRight}`}>
-          <img src={must} className='Mustang' alt="Mustang" />
+        <div className={`Car_must `} id='audiImg'>
+          <img src={audi} className='Mustang' alt="Mustang" />
              <div className='Tires'>
-                 <img src={mustt1} className={`t1 ${RotateLeft} ${RotateRight}`} alt="T1" />
-                 <img src={mustt2} className={`t2 ${RotateLeft} ${RotateRight}`} alt="T2" />
+                 <img src={mustt1} className="t1"  alt="T1" />
+                 <img src={mustt2} className="t2"  alt="T2" />
              </div>
-        </div> */}
+        </div>
 
 {/* Second Car */}
-            
-
 
         
         <MdOutlineArrowBackIosNew className="Arrow" id="left_arrow" onClick={handleLeftClick} />
