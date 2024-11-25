@@ -14,9 +14,9 @@ body{
 .Title-info{
     text-align: center;
     height: 100vh;
+    width: 100%;
     position: absolute;
-    left: 17%;
-    top: 15%;
+    top: 15%;   
     z-index: 0;
 
 }
@@ -61,22 +61,7 @@ body{
     }
 }
 
-@keyframes fadeOut {
-    from {
-      opacity: 1; 
-    }
-    to {
-        transform: translateY(-32em);
-        -webkit-transform: translateY(-32em);
-        -moz-transform: translateY(-32em);
-        -ms-transform: translateY(-32em);
-        -o-transform: translateY(-32em);
-}
-  }
-.right{
-    animation: fadeOut 2s forwards;
-    -webkit-animation: fadeOut 2s forwards;
-}
+
 
 @keyframes fadeIn {
     from {
@@ -95,14 +80,14 @@ body{
 }
   }
 .left{
-    animation: fadeIn 2s forwards;
-    -webkit-animation: fadeIn 2s forwards;
+    animation: fadeIn 1.5s forwards;
+    -webkit-animation: fadeIn 1.5s forwards;
 }
 
 .Car_must{
     width: 100%;
     position: absolute;
-    opacity: 1; 
+    opacity: 1;
 }
 
 .Car_must .Mustang{
@@ -118,7 +103,18 @@ body{
     filter: drop-shadow(5px 30px 20px rgb(105, 106, 106));
     -webkit-filter: drop-shadow(5px 30px 20px rgb(105, 106, 106));
 }
-
+.audi-style{
+    margin-top: -80px;
+    margin-left: -30px;
+}
+.Tires .audi-tire1{
+    margin-top: 35.9px;
+    margin-left: 28.8px;
+}
+.Tires .audi-tire2{
+    margin-top: 31px;
+    margin-left: 50px;
+}
 #audiImg{
     width: 100%;
     position: absolute;
@@ -139,28 +135,21 @@ body{
     -webkit-filter: drop-shadow(5px 30px 20px rgb(105, 106, 106));
 }
 
-
-
-
-@keyframes LeftSlide {
-    from {
-        transform: translateX(0);
-        opacity: 1; /* Start at the original position */
-      }
-      to {
-        transform: translateX(-100%); /* Slide completely to the left */
-/* Fade out */
-      }
-  }
-.LeftSlide{
-    animation: LeftSlide 3s forwards;
-    -webkit-animation: LeftSlide 3s forwards;
-    animation-delay: 0s;
-
+.luxus-style{
+    margin-top: 80px;
 }
+.Tires .luxus_tire1{
+   position: absolute;
+   margin-left: 7px;
+   margin-top: 6.2em;
+   
+}
+.Tires .luxus_tire2{
 
-
-
+    position: absolute;
+    margin-left: 46.3em;
+    margin-top: 6.2em;
+}
 
 
 @keyframes FirstLeftSlide {
@@ -174,6 +163,7 @@ body{
 }
       to {
         opacity: 1;
+        
 }
   }
 .FirstLeftSlide{
@@ -209,6 +199,7 @@ body{
 
 
 .Tires{
+    position: relative;
     transform: translateX(28.2%) translateY(66%);
     -webkit-transform: translateX(28.2%) translateY(66%);
     -moz-transform: translateX(28.2%) translateY(66%);
@@ -224,24 +215,6 @@ body{
 }
 
 
-@keyframes rotateLeft {
-    from {
-        transform: translateX(0) rotate(0);
-
-    }
-    to {
-        transform: translateX(0%) rotate(-720deg);
-        -webkit-transform: translateX(0%) rotate(-720deg);
-        -moz-transform: translateX(0%) rotate(-720deg);
-        -ms-transform: translateX(0%) rotate(-720deg);
-        -o-transform: translateX(0%) rotate(-720deg);
-}
-}
-.rotateLeft {
-    animation: rotateLeft 3s   forwards;
-    animation-delay: 0s;
-    -webkit-animation: rotateLeft 3s   forwards;
-}
 
 @keyframes rotateRight {
     from {
@@ -260,7 +233,27 @@ body{
     animation-delay: 0s;
     -webkit-animation: rotateRight 3s   forwards;
 }
-
+@keyframes rotateToLeft {
+    from {
+        transform: translateX(0%) rotate(0deg);
+        -webkit-transform: translateX(0%) rotate(0deg);
+        -moz-transform: translateX(0%) rotate(0deg);
+        -ms-transform: translateX(0%) rotate(0deg);
+        -o-transform: translateX(0%) rotate(0deg);
+}
+    to {
+        transform: translateX(0) rotate(720deg);
+        -webkit-transform: translateX(0) rotate(720deg);
+        -moz-transform: translateX(0) rotate(720deg);
+        -ms-transform: translateX(0) rotate(720deg);
+        -o-transform: translateX(0) rotate(720deg);
+}
+}
+.rotateToLeft {
+    animation: rotateToLeft 3s   forwards;
+    animation-delay: 0s;
+    -webkit-animation: rotateToLeft 3s   forwards;
+}
 
 
 .Arrow{
@@ -302,11 +295,6 @@ body{
 
 
 
-
-
-
-
-
 .icons{
     font-size: 30px;
     position: absolute;
@@ -318,4 +306,133 @@ body{
 .icons a{
     height: 7vh;
     display: block;
+} 
+
+.buttons{
+    position: absolute;
+    max-width: 100%;
+    top: 75%;
+    left: 40%;
+    
 }
+.buttons button{
+    font-size: 30px;
+    font-family: "Times New Roman", Times, serif;
+    padding: 10px;
+    width: 7em;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+
+}
+.buttons .rent{
+   color: white;
+}
+
+.buttons .det{
+    margin: 1em;
+    color: rgb(144, 144, 144);
+}
+
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadein 1s ease-in-out;
+    -webkit-animation: fadein 1s ease-in-out;
+}
+
+
+/* Slide to the right animation */
+.right {
+    animation: slide-right 1.5s forwards;
+    -webkit-animation: slide-right 1.5s forwards;
+}
+
+@keyframes slide-right {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-32em);
+        -webkit-transform: translateY(-32em);
+        -moz-transform: translateY(-32em);
+        -ms-transform: translateY(-32em);
+        -o-transform: translateY(-32em);
+    }
+}
+
+@keyframes LeftSlide {
+    from {
+        transform: translateX(0);
+        opacity: 1; /* Start at the original position */
+      }
+      to {
+        transform: translateX(-100%); /* Slide completely to the left */
+
+/* Fade out */
+      }
+  }
+.LeftSlide{
+    animation: LeftSlide 2s ease forwards;
+    -webkit-animation: LeftSlide 2s ease forwards;
+    animation-delay: 0s;
+}
+
+@keyframes rotate-left {
+    from {
+        transform: translateX(0) rotate(0);
+
+    }
+    to {
+        transform: translateX(0%) rotate(-720deg);
+        -webkit-transform: translateX(0%) rotate(-720deg);
+        -moz-transform: translateX(0%) rotate(-720deg);
+        -ms-transform: translateX(0%) rotate(-720deg);
+        -o-transform: translateX(0%) rotate(-720deg);
+}
+}
+.rotateLeft {
+    animation: rotate-left 1s   forwards;
+    -webkit-animation: rotate-left 1s   forwards;
+}
+
+
+
+/* LeftSlide animation */
+/* .LeftSlide {
+    animation: slide-left 1.5s ease-in-out;
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Rotate left animation */
+/* .rotateLeft {
+    animation: rotate-left 1.5s linear;
+}
+
+@keyframes rotate-left {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}   */
