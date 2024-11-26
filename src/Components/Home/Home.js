@@ -140,7 +140,7 @@ function Home() {
                 </a>
             </div>
             <div className='buttons'> 
-               <button type="button" className={`rent fade-in`} style={{ backgroundColor: currentCar.backgroundColor , animation:'opacity:1'}}>Rent Now</button>
+               <button type="button" className={`rent fade-in`} style={{ backgroundColor: currentCar.backgroundColor }}>Rent Now</button>
                <button type="button" className="det">Details</button>
             </div>
         
