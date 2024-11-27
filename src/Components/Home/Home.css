@@ -79,10 +79,54 @@ body{
         -o-transform: translateY(0em);
 }
   }
-.left{
+.down{
     animation: fadeIn 1.5s forwards;
     -webkit-animation: fadeIn 1.5s forwards;
 }
+@keyframes fadeIntwo {
+    from {
+        transform: translateY(-32em);
+        -webkit-transform: translateY(-32em);
+        -moz-transform: translateY(-32em);
+        -ms-transform: translateY(-32em);
+        -o-transform: translateY(-32em);
+    }
+    to {
+        transform: translateY(0em);
+        -webkit-transform: translateY(0em);
+        -moz-transform: translateY(0em);
+        -ms-transform: translateY(0em);
+        -o-transform: translateY(0em);
+}
+  }
+.downtwo{
+    animation: fadeIntwo 1.5s forwards;
+    -webkit-animation: fadeIntwo 1.5s forwards;
+}
+
+
+@keyframes fadeCenter {
+    from {
+        transform: rotate(0);
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+}
+    to {
+        transform: rotate(-720deg);
+        -webkit-transform: rotate(-720deg);
+        -moz-transform: rotate(-720deg);
+        -ms-transform: rotate(-720deg);
+        -o-transform: rotate(-720deg);
+}
+  }
+.rotatetocenter{
+    animation: fadeCenter 3.2s forwards;
+    -webkit-animation: fadeCenter 3.2s forwards;
+}
+
+
 
 .Car_must{
     width: 100%;
@@ -176,25 +220,63 @@ body{
 
 
 
-
+/*When i click in left arrow go right*/
 
 @keyframes RightSlide {
     from {
-        transform: translateX(-100%); /* Slide completely to the Right */
-      }
-      to {
+        opacity: 1;
         transform: translateX(0);
-        opacity: 1; /* Start at the original position */
-
-      }
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        -webkit-transform: translateX(0);
+}
+      to {
+        opacity: 1;
+        transform: translateX(200%);
+        -webkit-transform: translateX(200%);
+        -moz-transform: translateX(200%);
+        -ms-transform: translateX(200%);
+        -o-transform: translateX(200%);
+}
   }
 .RightSlide{
-    animation: RightSlide 3s forwards;
-    -webkit-animation: RightSlide 3s forwards;
+    animation: RightSlide 2.5s ease ;
+    -webkit-animation: RightSlide 2.5s ease ;
     animation-delay: 0s;
-
 }
 
+/* end */
+
+
+/*When */
+
+@keyframes lefttoright {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+}
+      to {
+        opacity: 1;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+}
+  }
+.lefttoright{
+    animation: lefttoright 2.5s ease ;
+    -webkit-animation: lefttoright 2.5s ease ;
+    animation-delay: 0s;
+}
+
+/* end */
 
 
 
@@ -216,13 +298,17 @@ body{
 
 
 
+
+
+
+/* 
 @keyframes rotateRight {
     from {
-        transform: translateX(0%) rotate(-720deg);
-        -webkit-transform: translateX(0%) rotate(-720deg);
-        -moz-transform: translateX(0%) rotate(-720deg);
-        -ms-transform: translateX(0%) rotate(-720deg);
-        -o-transform: translateX(0%) rotate(-720deg);
+        transform: translateX(0%) rotate(720deg);
+        -webkit-transform: translateX(0%) rotate(720deg);
+        -moz-transform: translateX(0%) rotate(720deg);
+        -ms-transform: translateX(0%) rotate(720deg);
+        -o-transform: translateX(0%) rotate(720deg);
 }
     to {
         transform: translateX(0) rotate(0);
@@ -232,7 +318,9 @@ body{
     animation: rotateRight 3s   forwards;
     animation-delay: 0s;
     -webkit-animation: rotateRight 3s   forwards;
-}
+} */
+
+
 @keyframes rotateToLeft {
     from {
         transform: translateX(0%) rotate(0deg);
@@ -242,11 +330,11 @@ body{
         -o-transform: translateX(0%) rotate(0deg);
 }
     to {
-        transform: translateX(0) rotate(720deg);
-        -webkit-transform: translateX(0) rotate(720deg);
-        -moz-transform: translateX(0) rotate(720deg);
-        -ms-transform: translateX(0) rotate(720deg);
-        -o-transform: translateX(0) rotate(720deg);
+        transform: translateX(0) rotate(-710deg);
+        -webkit-transform: translateX(0) rotate(-710deg);
+        -moz-transform: translateX(0) rotate(-710deg);
+        -ms-transform: translateX(0) rotate(-710deg);
+        -o-transform: translateX(0) rotate(-710deg);
 }
 }
 .rotateToLeft {
@@ -390,23 +478,34 @@ body{
     animation-delay: 0s;
 }
 
-@keyframes rotate-left {
-    from {
-        transform: translateX(0) rotate(0);
 
-    }
-    to {
-        transform: translateX(0%) rotate(-720deg);
-        -webkit-transform: translateX(0%) rotate(-720deg);
-        -moz-transform: translateX(0%) rotate(-720deg);
-        -ms-transform: translateX(0%) rotate(-720deg);
-        -o-transform: translateX(0%) rotate(-720deg);
+
+
+@keyframes first-rotate {
+    from {
+        transform: translateX(-100%) rotate(-720deg);
+        -webkit-transform: translateX(-100%) rotate(-720deg);
+        -moz-transform: translateX(-100%) rotate(-720deg);
+        -ms-transform: translateX(-100%) rotate(-720deg);
+        -o-transform: translateX(-100%) rotate(-720deg);
 }
+     to {
+        opacity: 0;
+        transform: translateX(0) rotate(720deg);
+        -webkit-transform: translateX(0) rotate(720deg);
+        -moz-transform: translateX(0) rotate(720deg);
+        -ms-transform: translateX(0) rotate(720deg);
+        -o-transform: translateX(0) rotate(720deg);
+ 
 }
-.rotateLeft {
-    animation: rotate-left 1s   forwards;
-    -webkit-animation: rotate-left 1s   forwards;
+  }
+.FirstRotate{
+    animation: first-rotate 2s ease forwards;
+    -webkit-animation: first-rotate 2s ease forwards;
+    animation-delay: 0s;
 }
+
+
 
 
 
@@ -437,3 +536,25 @@ body{
         transform: rotate(-360deg);
     }
 }   */
+
+
+
+
+
+/* Slide new car in from the left */
+@keyframes slide-left-in {
+    from {
+        transform: translateX(-100%);
+
+    }
+    to {
+        transform: translateX(0%);
+
+    }
+}
+
+.slide-left-in {
+    animation: slide-left-in 3.5s  forwards
+    ;
+    -webkit-animation: slide-left-in 3.5s  forwards;
+}

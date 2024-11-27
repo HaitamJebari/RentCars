@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faTwitter, faPinterest } from '@fortawesome/free-brands-svg-icons';
 import { MdArrowForwardIos, MdOutlineArrowBackIosNew } from "react-icons/md";
@@ -40,6 +40,7 @@ function Home() {
 
         // Add more cars here
     ];
+ 
 
     const [currentIndex, setCurrentIndex] = useState(0); // Current car index
     const [animationClass, setAnimationClass] = useState(""); // Animation class
@@ -49,7 +50,6 @@ function Home() {
 
     setAnimationUp('right');       // Apply 'right' animation
     setIsClickedLeft('LeftSlide'); // Apply 'LeftSlide' animation
-    setRotateLeft('rotateLeft');   // Apply 'rotateLeft' animation
     setRotatetoleft('rotateToLeft');
 
     setTimeout(() => {
@@ -60,7 +60,7 @@ function Home() {
         // Reset animations after they finish
         setAnimationUp('');
         setIsClickedLeft('');
-        setRotateLeft('');
+        setRotatetoleft('');
     }, 950); 
     };
 
@@ -68,44 +68,98 @@ function Home() {
 
     // Function to handle left arrow click
     const handleLeftClick = () => {
+        setAnimationUp('right'); 
+        setIsClickedFirstLeft('down');
         setAnimationClass("slideRight"); // Add slide-right animation
+        setRightSlide('RightSlide');
+
+        setDowntwo('');
+        
+
+
+
+        // setLeftoRight("lefttoright");
+
+
         setTimeout(() => {
             setCurrentIndex((prev) => (prev - 1 + cars.length) % cars.length); // Navigate to previous car
+            setAnimationUp(''); 
+            setDowntwo('downtwo'); 
+
+
+
+            setNewAnimationClass('slide-left-in'); /* newwwww */
+            setIsClickedLeft('');
             setAnimationClass(""); // Reset animation
-        }, 500); // Match animation duration
+            setRightSlide('');
+  
+        }, 3000); // Match animation duration
+
+        /* newwwww */
+        setTimeout(() => {
+            setNewAnimationClass('');
+            
+            setDowntwo(''); 
+            
+        }, 2000);
+        /* newwwww */
     };
 
     // Current car details
     const currentCar = cars[currentIndex];
 
 
-    const [IsClickedUp,setIsClickedUp] = useState(false);
+
+    const[Downtwo,setDowntwo] = useState('');
+
+
+
+    const[NewAnimationClass,setNewAnimationClass] = useState('');
+
+
+    const[FirstRotate,setFirstRotate] = useState('');
+    const[LeftoRight,setLeftoRight] = useState('');
+
     const [AnimationUp,setAnimationUp] = useState('');
 
     const[IsClickedLeft,setIsClickedLeft]=useState("");
-    const[IsClickedFirstLeft,setIsClickedFirstLeft]=useState(true);//this
+
+
+    const[IsClickedFirstLeft,setIsClickedFirstLeft]=useState();//Animation down for the Title
+
+
+
+    const[RotateTocenter,setRotateTocenter]=useState(true);//Rotate Tires from right to center
+
+
+
     const[AnimationDown,setAnimationDown] = useState('');
     const[IsClickedRight,setIsClickedRight]=useState("");
-    const[RotateRight,setRotateRight]=useState("");
-    const[RotateLeft,setRotateLeft]=useState("");
+
     const[Rotatetoleft,setRotatetoleft]=useState("");
+
+
+    const[RightSlide,setRightSlide]=useState("");
+
+
+
 
     return (
         <>
             <div className='vide'></div>
 
             {/* Car Title */}
-            <div className={`Title-info ${IsClickedFirstLeft ? "left" : ""} ${AnimationUp} ${AnimationDown}`}>
+            <div className={`Title-info ${IsClickedFirstLeft} ${Downtwo} ${IsClickedFirstLeft ? "down" : ""} ${AnimationUp}`}>
                 <h1 className='ford'>{currentCar.name.split(' ')[0]}</h1>
                 <h1 className='must'>{currentCar.name.split(' ')[1]}</h1>
             </div>
 
             {/* Car Display */}
-            <div className={`Car_must ${currentCar.name === "AUDI A3" ? "audi-style" : ""}  ${currentCar.name === "LUXUS LC\nSERIES" ? "luxus-style" : ""} ${IsClickedFirstLeft ? "FirstLeftSlide" : ""} ${IsClickedLeft} ${IsClickedRight}`}>
+            <div className={`Car_must ${currentCar.name === "AUDI A3" ? "audi-style" : ""}  ${currentCar.name === "LUXUS LC\nSERIES" ? "luxus-style" : ""}  ${IsClickedFirstLeft ? "FirstLeftSlide" : ""} ${NewAnimationClass} ${RightSlide} ${IsClickedLeft} ${IsClickedRight}`}>
                 <img src={currentCar.img} className='Mustang' alt={currentCar.name} />
                 <div className='Tires'>
-                    <img src={currentCar.tires[0]}  className={`t1 ${currentCar.name === "AUDI A3" ? "audi-tire1" : ""} ${currentCar.name === "LUXUS LC\nSERIES" ? "luxus_tire1" : ""} ${IsClickedFirstLeft ? "rotateLeft" : ""} ${RotateLeft} ${Rotatetoleft} ${RotateRight}`} alt="Tire 1" />
-                    <img src={currentCar.tires[1]} className={`t2 ${currentCar.name === "AUDI A3" ? "audi-tire2" : ""} ${currentCar.name === "LUXUS LC\nSERIES" ? "luxus_tire2" : ""} ${IsClickedFirstLeft ? "rotateLeft" : ""} ${RotateLeft} ${Rotatetoleft} ${RotateRight}`} alt="Tire 2" />
+                    <img src={currentCar.tires[0]}  className={`t1 ${RotateTocenter ? "rotatetocenter" : ""} ${currentCar.name === "AUDI A3" ? "audi-tire1" : ""} ${currentCar.name === "LUXUS LC\nSERIES" ? "luxus_tire1" : ""}   ${Rotatetoleft} `} alt="Tire 1" />
+                    <img src={currentCar.tires[1]} className={`t2 ${RotateTocenter ? "rotatetocenter" : ""} ${currentCar.name === "AUDI A3" ? "audi-tire2" : ""} ${currentCar.name === "LUXUS LC\nSERIES" ? "luxus_tire2" : ""}   ${Rotatetoleft} `} alt="Tire 2" />
                 </div>
             </div>
 
