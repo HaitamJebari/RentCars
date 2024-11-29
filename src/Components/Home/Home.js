@@ -73,10 +73,8 @@ function Home() {
         setAnimationClass("slideRight"); // Add slide-right animation
         setRightSlide('RightSlide');
 
-        setDowntwo('');
         
-
-
+        setRotatetoCenterTwo("rotateToRight");
 
         // setLeftoRight("lefttoright");
 
@@ -84,23 +82,26 @@ function Home() {
         setTimeout(() => {
             setCurrentIndex((prev) => (prev - 1 + cars.length) % cars.length); // Navigate to previous car
             setAnimationUp(''); 
-            setDowntwo('downtwo'); 
+            // setDowntwo('downtwo'); 
 
 
+            // setRotatetoCenterTwo("");
 
+            setRotatetoCenterTwo("rotateToRight");
             setNewAnimationClass('slide-left-in'); /* newwwww */
             setIsClickedLeft('');
-            setAnimationClass(""); // Reset animation
+            setAnimationClass(''); // Reset animation
             setRightSlide('');
+            
   
-        }, 3000); // Match animation duration
+        }, 2500); // Match animation duration
 
         /* newwwww */
         setTimeout(() => {
             setNewAnimationClass('');
-            
-            setDowntwo(''); 
-            
+            //  setDowntwo(''); 
+             setRotatetoCenterTwo('');
+
         }, 2000);
         /* newwwww */
     };
@@ -122,11 +123,15 @@ function Home() {
 
     const [AnimationUp,setAnimationUp] = useState('');
 
-    const[IsClickedLeft,setIsClickedLeft]=useState("");
+    const[IsClickedLeft,setIsClickedLeft]=useState();
 
 
-    const[IsClickedFirstLeft,setIsClickedFirstLeft]=useState();//Animation down for the Title
+    const[IsClickedFirstLeft,setIsClickedFirstLeft]=useState(true);//Animation down for the Title
 
+
+
+    const[RotatetoCenterTwo,setRotatetoCenterTwo]=useState(true);//Animation down for the Title
+ 
 
 
     const[RotateTocenter,setRotateTocenter]=useState(true);//Rotate Tires from right to center
@@ -149,7 +154,7 @@ function Home() {
             <div className='vide'></div>
 
             {/* Car Title */}
-            <div className={`Title-info ${IsClickedFirstLeft} ${Downtwo} ${IsClickedFirstLeft ? "down" : ""} ${AnimationUp}`}>
+            <div className={`Title-info  ${IsClickedFirstLeft ? "down" : ""} ${AnimationUp}`}>
                 <h1 className='ford'>{currentCar.name.split(' ')[0]}</h1>
                 <h1 className='must'>{currentCar.name.split(' ')[1]}</h1>
             </div>
@@ -158,8 +163,8 @@ function Home() {
             <div className={`Car_must ${currentCar.name === "AUDI A3" ? "audi-style" : ""}  ${currentCar.name === "LUXUS LC\nSERIES" ? "luxus-style" : ""}  ${IsClickedFirstLeft ? "FirstLeftSlide" : ""} ${NewAnimationClass} ${RightSlide} ${IsClickedLeft} ${IsClickedRight}`}>
                 <img src={currentCar.img} className='Mustang' alt={currentCar.name} />
                 <div className='Tires'>
-                    <img src={currentCar.tires[0]}  className={`t1 ${RotateTocenter ? "rotatetocenter" : ""} ${currentCar.name === "AUDI A3" ? "audi-tire1" : ""} ${currentCar.name === "LUXUS LC\nSERIES" ? "luxus_tire1" : ""}   ${Rotatetoleft} `} alt="Tire 1" />
-                    <img src={currentCar.tires[1]} className={`t2 ${RotateTocenter ? "rotatetocenter" : ""} ${currentCar.name === "AUDI A3" ? "audi-tire2" : ""} ${currentCar.name === "LUXUS LC\nSERIES" ? "luxus_tire2" : ""}   ${Rotatetoleft} `} alt="Tire 2" />
+                    <img src={currentCar.tires[0]}  className={`t1 ${RotateTocenter ? "rotatetocenter" : ""} ${RotatetoCenterTwo}  ${currentCar.name === "AUDI A3" ? "audi-tire1" : ""} ${currentCar.name === "LUXUS LC\nSERIES" ? "luxus_tire1" : ""}   ${Rotatetoleft} `} alt="Tire 1" />
+                    <img src={currentCar.tires[1]} className={`t2 ${RotateTocenter ? "rotatetocenter" : ""} ${RotatetoCenterTwo} ${currentCar.name === "AUDI A3" ? "audi-tire2" : ""} ${currentCar.name === "LUXUS LC\nSERIES" ? "luxus_tire2" : ""}   ${Rotatetoleft} `} alt="Tire 2" />
                 </div>
             </div>
 
