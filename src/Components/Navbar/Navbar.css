@@ -13,7 +13,10 @@
 }
 .navbar ul li {
     display: flex;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
 }
 
 .img-box{
@@ -27,8 +30,13 @@
   background-color: white;
 }
 .img-box img{
+<<<<<<< HEAD
     width: 40px;
     height: 40px;
+=======
+    width: 50px;
+    height: 50px;
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
     object-fit: cover;
 }
 ul{

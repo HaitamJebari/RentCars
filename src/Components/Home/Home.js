@@ -12,12 +12,15 @@ import audi2 from '../../assets/audi_tire2.png';
 import luxus from '../../assets/luxus.png';
 import luxus1 from '../../assets/luxus_tire1.png';
 import luxus2 from '../../assets/luxus_tire2.png';
+<<<<<<< HEAD
 import img1 from '../../assets/img1.jpg';
 import img2 from '../../assets/img2.jpg';
 import img3 from '../../assets/img3.jpg';
 import fuel from '../../assets/fuel.png';
 import oil from '../../assets/oil.png';
 import chair from '../../assets/chair.png';
+=======
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
 
 
 
@@ -28,22 +31,35 @@ function Home() {
             name: "FORD MUSTANG",
             img: must,
             tires: [mustt1, mustt2],
+<<<<<<< HEAD
             backgroundColor: "#4f749e",
             gallery:[img2,img2,img2,img2]
+=======
+            backgroundColor: "#4f749e"
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
         },
         {
             name: "AUDI A3",
             img: audi,
             tires: [audi1, audi2], // Replace with Audi tire images if available
+<<<<<<< HEAD
             backgroundColor: "#cbcbce",
             gallery:[img1,img1,img1,]
+=======
+            backgroundColor: "#cbcbce"
+
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
         },
         {
             name: "LUXUS LC\nSERIES",
             img: luxus,
             tires: [luxus1, luxus2] ,
+<<<<<<< HEAD
             backgroundColor: "#b00937",
             gallery:[img3,img3]
+=======
+            backgroundColor: "#b00937"
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
         },
 
         // Add more cars here
@@ -114,6 +130,7 @@ function Home() {
         /* newwwww */
     };
 
+<<<<<<< HEAD
 
 const handleDetailsClick = () =>{
      setbuttonsDown('buttDown');
@@ -131,10 +148,13 @@ const handleDetailsClick = () =>{
 }
 
 
+=======
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
     // Current car details
     const currentCar = cars[currentIndex];
 
 
+<<<<<<< HEAD
     const[buttonsDown,setbuttonsDown] = useState('');
     const[iconsLeft,seticonsLeft] = useState('');
     const[arrowRightRight,setarrowRightRight] = useState('');
@@ -162,13 +182,22 @@ const handleback = () =>{
 
 
 
+=======
+
+    const[Downtwo,setDowntwo] = useState('');
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
 
 
 
     const[NewAnimationClass,setNewAnimationClass] = useState('');
 
 
+<<<<<<< HEAD
 
+=======
+    const[FirstRotate,setFirstRotate] = useState('');
+    const[LeftoRight,setLeftoRight] = useState('');
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
 
     const [AnimationUp,setAnimationUp] = useState('');
 
@@ -187,6 +216,10 @@ const handleback = () =>{
 
 
 
+<<<<<<< HEAD
+=======
+    const[AnimationDown,setAnimationDown] = useState('');
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
     const[IsClickedRight,setIsClickedRight]=useState("");
 
     const[Rotatetoleft,setRotatetoleft]=useState("");
@@ -199,6 +232,7 @@ const handleback = () =>{
 
     return (
         <>
+<<<<<<< HEAD
             <div className={`vide ${videUp}`}></div>
 
 
@@ -224,6 +258,32 @@ const handleback = () =>{
             
             {/* Right Arrow */}
             <MdArrowForwardIos className={`Arrow ${arrowRightRight}`} id="right_arrow" onClick={handleRightClick} />
+=======
+            <div className='vide'></div>
+
+            {/* Car Title */}
+            <div className={`Title-info  ${IsClickedFirstLeft ? "down" : ""} ${AnimationUp}`}>
+                <h1 className='ford'>{currentCar.name.split(' ')[0]}</h1>
+                <h1 className='must'>{currentCar.name.split(' ')[1]}</h1>
+            </div>
+
+            {/* Car Display */}
+            <div className={`Car_must ${currentCar.name === "AUDI A3" ? "audi-style" : ""}  ${currentCar.name === "LUXUS LC\nSERIES" ? "luxus-style" : ""}  ${IsClickedFirstLeft ? "FirstLeftSlide" : ""} ${NewAnimationClass} ${RightSlide} ${IsClickedLeft} ${IsClickedRight}`}>
+                <img src={currentCar.img} className='Mustang' alt={currentCar.name} />
+                <div className='Tires'>
+                    <img src={currentCar.tires[0]}  className={`t1 ${RotateTocenter ? "rotatetocenter" : ""} ${RotatetoCenterTwo}  ${currentCar.name === "AUDI A3" ? "audi-tire1" : ""} ${currentCar.name === "LUXUS LC\nSERIES" ? "luxus_tire1" : ""}   ${Rotatetoleft} `} alt="Tire 1" />
+                    <img src={currentCar.tires[1]} className={`t2 ${RotateTocenter ? "rotatetocenter" : ""} ${RotatetoCenterTwo} ${currentCar.name === "AUDI A3" ? "audi-tire2" : ""} ${currentCar.name === "LUXUS LC\nSERIES" ? "luxus_tire2" : ""}   ${Rotatetoleft} `} alt="Tire 2" />
+                </div>
+            </div>
+
+
+            {/* Left Arrow */}
+            <MdOutlineArrowBackIosNew className="Arrow" id="left_arrow" onClick={handleLeftClick} />
+
+            
+            {/* Right Arrow */}
+            <MdArrowForwardIos className="Arrow" id="right_arrow" onClick={handleRightClick} />
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
 
 
 
@@ -233,7 +293,11 @@ const handleback = () =>{
 
 
             {/* Social Icons */}
+<<<<<<< HEAD
             <div className={`icons ${iconsLeft}`}>
+=======
+            <div className='icons'>
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
                 <a href="https://www.facebook.com/haitameljebari" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faFacebookF} />
                 </a>
@@ -247,6 +311,7 @@ const handleback = () =>{
                     <FontAwesomeIcon icon={faPinterest} />
                 </a>
             </div>
+<<<<<<< HEAD
             <div className={`buttons ${buttonsDown}`}> 
                <button type="button" className={`rent fade-in`} style={{ backgroundColor: currentCar.backgroundColor }} >Rent Now</button>
                <button type="button" className="det" onClick={handleDetailsClick} >Details</button>
@@ -300,6 +365,11 @@ const handleback = () =>{
                     </ul>
                     <button type="button" className="rent_two" style={{ backgroundColor: currentCar.backgroundColor  }} >Rent Now</button>
 
+=======
+            <div className='buttons'> 
+               <button type="button" className={`rent fade-in`} style={{ backgroundColor: currentCar.backgroundColor }}>Rent Now</button>
+               <button type="button" className="det">Details</button>
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
             </div>
         
         </>

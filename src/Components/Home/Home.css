@@ -176,12 +176,21 @@ body{
     margin-left: -30px;
 }
 .Tires .audi-tire1{
+<<<<<<< HEAD
     margin-top: 30px;
     margin-left: 28px;
 }
 .Tires .audi-tire2{
     margin-top: 29px;
     margin-left: 45px;
+=======
+    margin-top: 35.9px;
+    margin-left: 28.8px;
+}
+.Tires .audi-tire2{
+    margin-top: 31px;
+    margin-left: 50px;
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
 }
 #audiImg{
     width: 100%;
@@ -209,14 +218,23 @@ body{
 .Tires .luxus_tire1{
    position: absolute;
    margin-left: 7px;
+<<<<<<< HEAD
    margin-top: 5.5em;
+=======
+   margin-top: 6.2em;
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
    
 }
 .Tires .luxus_tire2{
 
     position: absolute;
+<<<<<<< HEAD
     margin-left: 41.8em;
     margin-top: 5.5em;
+=======
+    margin-left: 46.3em;
+    margin-top: 6.2em;
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
 }
 
 
@@ -265,8 +283,13 @@ body{
 }
   }
 .RightSlide{
+<<<<<<< HEAD
     animation: RightSlide 2.5s ease ;
     -webkit-animation: RightSlide 2.5s ease ;
+=======
+    animation: RightSlide 2.5s forwards ;
+    -webkit-animation: RightSlide 2.5s forwards ;
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
     animation-delay: 0s;
 }
 
@@ -305,6 +328,7 @@ body{
 
 .Tires{
     position: relative;
+<<<<<<< HEAD
     transform: translateX(27.9%) translateY(63%);
     -webkit-transform: translateX(27.9%) translateY(63%);
     -moz-transform: translateX(27.9%) translateY(63%);
@@ -318,6 +342,20 @@ body{
 .Tires .t1{
    margin-right: 28.84em;
 
+=======
+    transform: translateX(28.2%) translateY(66%);
+    -webkit-transform: translateX(28.2%) translateY(66%);
+    -moz-transform: translateX(28.2%) translateY(66%);
+    -ms-transform: translateX(28.2%) translateY(66%);
+    -o-transform: translateX(28.2%) translateY(66%);
+}
+.Tires img{
+    width: 11.5em;
+    height: 11.5em;
+}
+.Tires .t1{
+   margin-right: 32.7em;
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
 }
 
 
@@ -387,9 +425,15 @@ body{
 }
 }
 .rotateToRight {
+<<<<<<< HEAD
     animation: rotateToRight 3s ease;
     animation-delay: 0s;
     -webkit-animation: rotateToRight 3s ease;
+=======
+    animation: rotateToRight 3s   forwards;
+    animation-delay: 0s;
+    -webkit-animation: rotateToRight 3s   forwards;
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
 }
 
 
@@ -407,7 +451,10 @@ body{
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     cursor: pointer;
+<<<<<<< HEAD
     z-index: 1;
+=======
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
 }
 #left_arrow{
     left: 5%;
@@ -434,7 +481,11 @@ body{
 
 
 .icons{
+<<<<<<< HEAD
     font-size: 26px;
+=======
+    font-size: 30px;
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
     position: absolute;
     top: 63%;
     left: 10%;
@@ -451,7 +502,11 @@ body{
     position: absolute;
     max-width: 100%;
     top: 75%;
+<<<<<<< HEAD
     left: 38%;
+=======
+    left: 40%;
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
     
 }
 .buttons button{
@@ -476,7 +531,10 @@ body{
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
 @keyframes fadein {
     from {
         opacity: 1;
@@ -524,8 +582,13 @@ body{
       }
   }
 .LeftSlide{
+<<<<<<< HEAD
     animation: LeftSlide 2s ease ;
     -webkit-animation: LeftSlide 2s ease ;
+=======
+    animation: LeftSlide 2s ease forwards;
+    -webkit-animation: LeftSlide 2s ease forwards;
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
     animation-delay: 0s;
 }
 
@@ -612,6 +675,7 @@ body{
 
 
 
+<<<<<<< HEAD
 @keyframes buttDown {
     from {
         transform: translateY(0%);
@@ -978,3 +1042,6 @@ body{
     animation: ShowSpecs 2s  ease forwards;
     -webkit-animation: ShowSpecs 2s  ease forwards;
 }
+=======
+
+>>>>>>> 2db8baa3a2998f0b6938612a20d98a16d3a00b86
