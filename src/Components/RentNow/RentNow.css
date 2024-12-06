@@ -1,0 +1,72 @@
+
+  /* Container */
+  .rent-car-container {
+    max-width: 900px;
+    height: 80vh;
+    margin: 35px auto;
+    background: #ffffff;
+    padding: 20px 30px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  /* Title */
+  .rent-car-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form Styles */
+  .rent-car-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  .form-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Button */
+  .rent-car-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+  }
+  
+  .rent-car-btn:hover {
+    background-color: #0056b3;
+  }
+  
