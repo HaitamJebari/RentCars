@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faTwitter, faPinterest } from '@fortawesome/free-brands-svg-icons';
 import { MdArrowForwardIos, MdOutlineArrowBackIosNew } from "react-icons/md";
 import './Home.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import must from '../../assets/must.png';
 import mustt1 from '../../assets/must_tire1.png';
 import mustt2 from '../../assets/must_tire2.png';
@@ -50,6 +50,9 @@ function Home() {
         // Add more cars here
     ];
  
+
+
+
 
     const [currentIndex, setCurrentIndex] = useState(0); // Current car index
     const [animationClass, setAnimationClass] = useState(""); // Animation class
@@ -303,13 +306,15 @@ const handleback = () =>{
 
                     </ul>
                     {/* <button type="button" className="rent_two" style={{ backgroundColor: currentCar.backgroundColor  }} >Rent Now</button> */}
-                    <button className="cta" >
-                        <span>Rent Now</span>
-                        <svg width="15px" height="10px" viewBox="0 0 13 10">
-                            <path d="M1,5 L11,5"></path>
-                            <polyline points="8 1 12 5 8 9"></polyline>
-                        </svg>
-                    </button>
+                    
+                        <Link to="/rentnow" className="cta" >
+                            <span>Rent Now</span>
+                            <svg width="15px" height="10px" viewBox="0 0 13 10">
+                                <path d="M1,5 L11,5"></path>
+                                <polyline points="8 1 12 5 8 9"></polyline>
+                            </svg>
+                        </Link>
+                    
             </div>
         
         </>

@@ -1,4 +1,7 @@
-
+.ArrowLeft{
+  width: 20px;
+  height:  20px;
+}
   /* Container */
   .rent-car-container {
     max-width: 900px;

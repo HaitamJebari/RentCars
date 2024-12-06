@@ -407,7 +407,6 @@ body{
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     cursor: pointer;
-    z-index: 1;
 }
 #left_arrow{
     left: 5%;
@@ -1001,7 +1000,7 @@ button:hover {
 }
 
 
-.gallery .cta{
+.gallery  .cta{
     position: relative;
     font-size: 30px;
     font-family: "Times New Roman", Times, serif;
@@ -1074,4 +1073,3 @@ button:hover {
   .cta:active {
     transform: scale(0.95);
   }
-  

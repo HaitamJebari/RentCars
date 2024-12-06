@@ -1,21 +1,23 @@
 import { Link } from "react-router-dom";
 import "./RentNow.css";
 import { MdArrowForwardIos, MdOutlineArrowBackIosNew } from "react-icons/md";
+import { FaArrowLeft} from 'react-icons/fa';
+
 
 
 function RentNow() {
 
-  const handleback = () =>{
-    
-     <Link to="/"></Link>
-}
+
 
 
   return (
     <>
-                <MdOutlineArrowBackIosNew className={`Arrow`} id="left_arrow" onClick={handleback} />
+              
 
     <div className="rent-car-container">
+              <Link to='/' >
+                 <FaArrowLeft className="ArrowLeft"/>
+              </Link>
       <h1 className="rent-car-title">Rent Your Dream Car</h1>
       <form className="rent-car-form">
         <div className="form-group">
